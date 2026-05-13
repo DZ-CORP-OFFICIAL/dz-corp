@@ -5,6 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DZ CORP | Официальный терминал</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для красивой книжной полки */
+        .books-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        .book-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 15px;
+            max-width: 200px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: #fff;
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff3333; /* В стиле вашей корпорации */
+            box-shadow: 0 5px 15px rgba(255, 51, 51, 0.2);
+        }
+        .book-cover-placeholder {
+            width: 100%;
+            height: 220px;
+            background: #1a1a1a;
+            border: 1px dashed #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .book-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+        .book-series {
+            font-size: 11px;
+            color: #888;
+        }
+        .discord-widget-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px auto 10px auto;
+            padding: 0 15px;
+        }
+    </style>
 </head>
 <body>
 
@@ -33,7 +89,24 @@
         <section class="section author-zone">
             <h2>[ ЛИТЕРАТУРНЫЙ АРХИВ ]</h2>
             <p>Лидер DZ CORP — писатель <strong>Велес Богов</strong>. Ознакомиться с его трудами можно на официальном ресурсе:</p>
-            <a href="https://www.litres.ru/author/veles-bogov/" target="_blank" class="litres-btn">ЧИТАТЬ ВЕЛЕСА БОГОВА НА ЛИТРЕС</a>
+            
+            <!-- КНИЖНАЯ ПОЛКА С КАРТОЧКАМИ КНИГ -->
+            <div class="books-grid">
+                <a href="litres.ru" target="_blank" class="book-card">
+                    <div class="book-cover-placeholder">Обложка</div>
+                    <div class="book-title">Имя из пепла</div>
+                    <div class="book-series">Цикл книг</div>
+                </a>
+                <a href="litres.ru" target="_blank" class="book-card">
+                    <div class="book-cover-placeholder">Обложка</div>
+                    <div class="book-title">ЕВА: Новый Эдем</div>
+                    <div class="book-series">Фантастика</div>
+                </a>
+            </div>
+
+            <div style="text-align: center; margin-top: 25px;">
+                <a href="https://www.litres.ru/author/veles-bogov/" target="_blank" class="litres-btn">ОТКРЫТЬ ПРОФИЛЬ НА ЛИТРЕС</a>
+            </div>
         </section>
 
         <!-- ГАЛЕРЕЯ -->
@@ -71,9 +144,14 @@
             </ul>
         </section>
 
-        <!-- КНОПКА DISCORD -->
-        <div class="cta-zone">
-            <a href="https://discord.gg/rVnh6aeG9z" target="_blank" class="join-btn">ПРИСОЕДИНИТЬСЯ К DZ CORP (DISCORD)</a>
+        <!-- КНОПКА DISCORD И ЖИВОЙ ВИДЖЕТ -->
+        <div class="cta-zone" style="text-align: center;">
+            <a href="discord.gg" target="_blank" class="join-btn" style="margin-bottom: 20px; display: inline-block;">ПРИСОЕДИНИТЬСЯ К DZ CORP (DISCORD)</a>
+            
+            <!-- НАСТОЯЩИЙ ЖИВОЙ ВИДЖЕТ ВАШЕГО СЕРВЕРА -->
+            <div class="discord-widget-container">
+                <iframe src="https://discord.gg/rVnh6aeG9z" width="100%" height="400" style="max-width: 350px; border: none; border-radius: 8px;" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
         </div>
     </main>
 
